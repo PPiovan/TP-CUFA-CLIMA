@@ -4,29 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Clima</title>
 </head>
 <body>
-    <div>
-        <head>
+    <div class="container">
+        <div class="search-box">
+            <i class='bx bxs-map' ></i>
+            <input type="text" placeholder="Buscar ciudad...">
+            <button class='bx bx-search' ></button>
             
-            <ul>
-                <li><a href="index.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
-                <li><a href="#"><i class="fa fa-hourglass"></i>Cada Hora</a></li>
-                <li><a href="#"><i class="fa fa-calendar"></i>Mensual</a></li>
-                <li><a href="#"><i class="fa fa-globe" aria-hidden="true"></i>Radar</a></li>
-            </ul> 
-        </head>
+        </div>
+
+        <div class="weather-box">
+            <div class="box">
+                <div class="info-weather">
+                    <div class="weather">
+                        <img src="imgs/yellow-sun.png" alt="">
+                        <p class="temperature">25<span>°C</span></p>
+                        <p class="description">Despejado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="weather-details">
+            <div class="humidity">
+                <i class='bx bx-droplet' ></i>
+                <div class="text">
+                    <div class="info-humidity"><span>0%</span></div>
+                    <p>Humedad</p>
+                </div>
+            </div>
+
+            <div class="wind">
+                <i class='bx bx-wind' ></i>
+                <div class="text">
+                    <div class="info-wind"><span>0 Km/h</span></div>
+                    <p>Viento</p>
+                </div>
+            </div>
+        </div>
+        
+
     </div>
-       <section class="content">
-                <h2 class="titulo_frase">Buscá el clima de cualquier ciudad</h2>
-                <p class="subtitulo_frase">¡Encontrá el clima que te espera!</p>
-            <section class="buscar">
-                <form class="buscarForm" action="">
-                    <input class="search__input" type="text" autofocus="none" placeholder="Ingresa una ciudad" name="city-name" autocomplete="off" id="search-box">
-                </form>
-                
-        </section>
 </body>
 </html>
