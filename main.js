@@ -5,6 +5,18 @@ const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
 const cityHide = document.querySelector('.city-hide');
 
+function setWeatherBackground(weather) {
+    document.body.classList.remove('sunny', 'rainy', 'cloudy');
+    if (weather === 'Clear') {
+        document.body.classList.add('sunny');
+    } else if (weather === 'Rain') {
+        document.body.classList.add('rainy');
+    } else if (weather === 'Clouds') {
+        document.body.classList.add('cloudy');
+    }
+    // Agrega más condiciones según los tipos de clima
+}
+
 
 search.addEventListener('click', () => {
     const APIKey = '899b64acf3b986f8660e32e13fe9a456';
@@ -74,7 +86,8 @@ search.addEventListener('click', () => {
                 
             }
 
-            
+            setWeatherBackground(json.weather[0].main);
+
             temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
             description.innerHTML = `${json.weather[0].description}`;
             humidity.innerHTML = `${json.main.humidity}%`;
@@ -136,4 +149,6 @@ search.addEventListener('click', () => {
     
             
         });
+    
+    
 });

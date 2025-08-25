@@ -17,6 +17,16 @@ body{
     overflow: hidden;
 }
 
+body.sunny {
+    background: url('imgs/soleado.jpg') ;
+}
+body.rainy {
+    background: url('imgs/lluvia_fondo.jpeg');
+}
+body.cloudy {
+    background: url('imgs/Weather.jpeg') ;
+}
+
 .container{
    position: relative;
     width: 400px;
