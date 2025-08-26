@@ -5,14 +5,16 @@ const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
 const cityHide = document.querySelector('.city-hide');
 
-function setWeatherBackground(weather) {
-    document.body.classList.remove('sunny', 'rainy', 'cloudy');
+function setWeatherBackground(weather, icon) {
+     const night = icon.endsWith("n");
+
+    document.body.classList.remove('sunny', 'rainy', 'cloudy', 'sunny-night', 'rainy-night', 'cloudy-night');
     if (weather === 'Clear') {
-        document.body.classList.add('sunny');
+        document.body.classList.add(night ? 'sunny-night' : 'sunny');
     } else if (weather === 'Rain') {
-        document.body.classList.add('rainy');
+        document.body.classList.add(night ? 'rainy' : 'rainy-night');
     } else if (weather === 'Clouds') {
-        document.body.classList.add('cloudy');
+        document.body.classList.add(night ? 'cloudy' : 'cloudy-night');
     }
     // Agrega más condiciones según los tipos de clima
 }
@@ -34,9 +36,16 @@ search.addEventListener('click', () => {
                 error404.classList.add('active');
                 return;
             }
-
             
+            const icon = json.weather[0].icon;
+            const night = icon.endsWith("n");
+            
+            if(night){
+                //Si es de noche devuelve true, sino false
+                console.log(night);
+            }else{
 
+            }
 
 
 
@@ -64,10 +73,10 @@ search.addEventListener('click', () => {
 
                 switch (json.weather[0].main) {
                 case 'Clear':
-                    image.src = 'imgs/yellow-sun.png';
+                    image.src = night ? 'imgs/clear-night.webp' : 'imgs/yellow-sun.png';
                     break;
                 case 'Rain':
-                    image.src = 'imgs/lluvia.png';
+                    image.src = night ? 'imgs/lluvia.png' : 'img/lluvia.png';
                     break;
                 case 'Snow':
                     image.src = 'imgs/nieve.png';
@@ -86,7 +95,7 @@ search.addEventListener('click', () => {
                 
             }
 
-            setWeatherBackground(json.weather[0].main);
+            setWeatherBackground(json.weather[0].main, json.weather[0].icon);
 
             temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
             description.innerHTML = `${json.weather[0].description}`;
