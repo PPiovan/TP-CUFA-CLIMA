@@ -1,5 +1,6 @@
 const container = document.querySelector('.container');
 const search = document.querySelector('.search-box button');
+const input = document.querySelector('.search-box input');
 const weatherBox = document.querySelector('.weather-box');
 const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
@@ -18,6 +19,13 @@ function setWeatherBackground(weather, icon) {
     }
     // Agrega más condiciones según los tipos de clima
 }
+
+//para que tambiénm busque con el enter
+input.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        search.click(); //le pega una simulada de click :)
+    }
+});
 
 
 search.addEventListener('click', () => {
@@ -43,8 +51,6 @@ search.addEventListener('click', () => {
             if(night){
                 //Si es de noche devuelve true, sino false
                 console.log(night);
-            }else{
-
             }
 
 
@@ -150,7 +156,7 @@ search.addEventListener('click', () => {
                    cloneInfoWeatherFirst.remove();
                    cloneInfoHumidityFirst.remove();
                    cloneInfoWindFirst.remove();
-               }, 2200); 
+               }, 2200);    
             }
 
             }
