@@ -73,25 +73,25 @@ search.addEventListener('click', () => {
 
                 switch (json.weather[0].main) {
                 case 'Clear':
-                    image.src = night ? 'imgs/clear-night.webp' : 'imgs/yellow-sun.png';
+                    image.src = night ? 'imgs/despejado-noche' : 'imgs/despejado.png';
                     break;
                 case 'Rain':
-                    image.src = night ? 'imgs/lluvia.png' : 'img/lluvia.png';
+                    image.src = night ? 'imgs/lluvia.png' : 'imgs/lluvia.png';
                     break;
                 case 'Snow':
-                    image.src = 'imgs/nieve.png';
+                    image.src = night ? 'imgs/night-snow.png': 'imgs/nieve.png';
                     break;
                 case 'Clouds':
-                    image.src = 'imgs/nublado.png';
+                    image.src = night ? 'imgs/nublado-noche.png': 'imgs/nublado.png';
                     break;
-                case 'Mist':
-                    image.src = 'imgs/niebla.png';
+                case 'Mist':    
+                    image.src = night ? 'imgs/niebla.png' : 'imgs/niebla.png';
                     break;
                 case 'Thunderstorm':
-                    image.src = 'imgs/tormenta.png';
+                    image.src = night ? 'imgs/tormenta.png' : 'imgs/tormenta.png';
                     break;
                 default:
-                    image.src = 'imgs/yellow-sun.png';
+                    image.src = 'imgs/despejado-noche.png';
                 
             }
 

@@ -21,43 +21,53 @@ body{
 }
 
 body.sunny {
-    background: url('imgs/soleado.jpg') ;
+    background: url('imgs/clear-sun.png') ;
+    background-size: auto;
+    background-position: center;
 
 }
-
-body.rainy {
-    background: url('imgs/lluvia_fondo.jpeg');
-
-}
-body.cloudy {
-    background: url('imgs/Weather.jpeg') ;
-}
-
-body.sunny-night {
+body .sunny-night {
     background: url('imgs/clear-night.webp') ;
     background-size: auto;
     background-position: center;
 }
 
+body.rainy {
+    background: url('imgs/rainy.png');
+    background-size: auto;
+    background-position: center;
+
+}
+
 body.rainy-night {
-    background: url('imgs/rainy-night.jpg') ;
+    background: url('imgs/rainy-night.png') ;
     background-size: auto;
     background-position: center;
 }
 
+body.cloudy {
+    background: url('imgs/cloudy-night.png') ;
+    background-size: auto;
+    background-position: center;
+}
+
+
+
 body.cloudy-night {
-    background: url('imgs/clouded-sky.jpg') ;
+    background: url('imgs/cloudy-night.png') ;
     background-size: auto;
     background-position: center;
 }           
 
 
 
-
-body.sunny, body.rainy, body.cloudy{
+/* 
+body.sunny, body.rainy, body.cloudy, body.sunny-night, body.rainy-night, body.cloudy-night {
     background-size: cover;
     background-position: center;
-}
+    width: 1920px;
+    height: 1080px;
+} */
 
 .container{
     margin-top: 80px;
@@ -343,4 +353,10 @@ nav{
 
 .nav-list ul li a:hover::after{
     width: 100%;
+}
+
+.logo-image {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
