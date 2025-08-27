@@ -73,25 +73,25 @@ search.addEventListener('click', () => {
 
                 switch (json.weather[0].main) {
                 case 'Clear':
-                    image.src = night ? 'imgs/despejado-noche' : 'imgs/despejado.png';
+                    image.src = night ? 'imgs/icons/despejado-noche' : 'imgs/icons/despejado.png';
                     break;
                 case 'Rain':
-                    image.src = night ? 'imgs/lluvia.png' : 'imgs/lluvia.png';
+                    image.src = night ? 'imgs/icons/lluvia.png' : 'imgs/icons/lluvia.png';
                     break;
                 case 'Snow':
-                    image.src = night ? 'imgs/night-snow.png': 'imgs/nieve.png';
+                    image.src = night ? 'imgs/icons/night-snow.png': 'imgs/icons/nieve.png';
                     break;
                 case 'Clouds':
-                    image.src = night ? 'imgs/nublado-noche.png': 'imgs/nublado.png';
+                    image.src = night ? 'imgs/icons/nublado-noche.png': 'imgs/icons/nublado.png';
                     break;
                 case 'Mist':    
-                    image.src = night ? 'imgs/niebla.png' : 'imgs/niebla.png';
+                    image.src = night ? 'imgs/icons/niebla.png' : 'imgs/icons/niebla.png';
                     break;
                 case 'Thunderstorm':
-                    image.src = night ? 'imgs/tormenta.png' : 'imgs/tormenta.png';
+                    image.src = night ? 'imgs/icons/tormenta.png' : 'imgs/icons/tormenta.png';
                     break;
                 default:
-                    image.src = 'imgs/despejado-noche.png';
+                    image.src = 'imgs/icons/despejado-noche.png';
                 
             }
 
