@@ -44,6 +44,9 @@ search.addEventListener('click', () => {
                 error404.classList.add('active');
                 return;
             }
+            
+            const icon = json.weather[0].icon;
+            const night = icon.endsWith("n"); //esta propiedad devuelve true si es de noche
 
         
 
