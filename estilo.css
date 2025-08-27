@@ -15,20 +15,53 @@ body{
     min-height: 100vh;
     display: flex;
     overflow: hidden;
+    flex-direction: column;
+    margin-top: -12px;
+    padding: 0;
 }
 
 body.sunny {
     background: url('imgs/soleado.jpg') ;
+
 }
+
 body.rainy {
     background: url('imgs/lluvia_fondo.jpeg');
+
 }
 body.cloudy {
     background: url('imgs/Weather.jpeg') ;
 }
 
+body.sunny-night {
+    background: url('imgs/clear-night.webp') ;
+    background-size: auto;
+    background-position: center;
+}
+
+body.rainy-night {
+    background: url('imgs/rainy-night.jpg') ;
+    background-size: auto;
+    background-position: center;
+}
+
+body.cloudy-night {
+    background: url('imgs/clouded-sky.jpg') ;
+    background-size: auto;
+    background-position: center;
+}           
+
+
+
+
+body.sunny, body.rainy, body.cloudy{
+    background-size: cover;
+    background-position: center;
+}
+
 .container{
-   position: relative;
+    margin-top: 80px;
+    position: fixed;
     width: 400px;
     height: 100px;
     background: rgba(255, 255, 255, .1);
@@ -38,7 +71,6 @@ body.cloudy {
     padding: 20px;
     color: #fff;
     transition: height .6s ease;
-  
 }
 
 .search-box{
@@ -269,4 +301,52 @@ body.cloudy {
 .active-clone#clone-info-wind  span {
 
   transform: translateY(0%);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: rgba(30, 30, 30, 0.3);
+    top: 0;
+    left: 0;
+    align-items: center;
+    position: fixed;
+}
+
+.nav-list{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-list ul li{
+    display: inline-block;
+    padding: 8px 12px;
+    list-style: none;
+}
+
+.nav-list ul li a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.nav-list ul li a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: yellow;
+    margin: auto;
+    display: block;
+    transition: .1s;
+
+}
+
+.nav-list ul li a:hover::after{
+    width: 100%;
+}
+
+.logo-image {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
