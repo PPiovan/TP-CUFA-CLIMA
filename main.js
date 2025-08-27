@@ -46,15 +46,7 @@ search.addEventListener('click', () => {
             }
             
             const icon = json.weather[0].icon;
-            const night = icon.endsWith("n");
-            
-            if(night){
-                //Si es de noche devuelve true, sino false
-                console.log(night);
-            }
-
-
-
+            const night = icon.endsWith("n"); //esta propiedad devuelve true si es de noche
 
             const image = document.querySelector('.weather-box img');
             const temperature = document.querySelector('.weather-box .temperature');
