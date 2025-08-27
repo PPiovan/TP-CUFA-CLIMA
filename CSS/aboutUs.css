@@ -103,8 +103,26 @@ nav{
     width: 100%;
 }
 
+.card{
+    background: rgba(0, 0, 0, 0.7);
+    border: none;
+    color: white;   
+    transition: transform 0.3s, box-shadow 0.3s;
+}
 
+.card img {
+    
+    height: 300px;
+    object-fit: cover;     /* Recorta la imagen para que ocupe todo el espacio */
+    
+    display: block;
+    margin: 0 auto;
+}
 
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
 
 @media (max-width: 600px) {
     .carousel-inner img {
