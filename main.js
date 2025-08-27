@@ -44,22 +44,8 @@ search.addEventListener('click', () => {
                 error404.classList.add('active');
                 return;
             }
-<<<<<<< HEAD
 
         
-=======
-            
-            const icon = json.weather[0].icon;
-            const night = icon.endsWith("n");
-            
-            if(night){
-                //Si es de noche devuelve true, sino false
-                console.log(night);
-            }
-
-
-
->>>>>>> a9d743c2ed0e771550632a87602ef28c8dfff400
 
             const image = document.querySelector('.weather-box img');
             const temperature = document.querySelector('.weather-box .temperature');
