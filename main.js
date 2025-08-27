@@ -35,11 +35,7 @@ search.addEventListener('click', () => {
                 return;
             }
 
-            
-
-
-
-
+        
 
             const image = document.querySelector('.weather-box img');
             const temperature = document.querySelector('.weather-box .temperature');
