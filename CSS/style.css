@@ -7,7 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background: url(imgs/Weather.jpeg);
+    background: url(../imgs/Weather.jpeg);
     background-size: cover;
     background-position: center;
     justify-content: center;
@@ -21,53 +21,47 @@ body{
 }
 
 body.sunny {
-    background: url('imgs/clear-sun.png') ;
-    background-size: auto;
-    background-position: center;
+    background: url('../imgs/backgrounds/clear-sun.png') ;
+  
 
 }
 body .sunny-night {
-    background: url('imgs/clear-night.webp') ;
-    background-size: auto;
-    background-position: center;
+    background: url('../imgs/backgrounds/clear-night.webp') ;
+   
 }
 
 body.rainy {
-    background: url('imgs/rainy.png');
-    background-size: auto;
-    background-position: center;
+    background: url('../imgs/backgrounds/rainy.png');
+
 
 }
 
 body.rainy-night {
-    background: url('imgs/rainy-night.png') ;
-    background-size: auto;
-    background-position: center;
+    background: url('../imgs/backgrounds/rainy-night.png') ;
+   
 }
 
 body.cloudy {
-    background: url('imgs/cloudy-night.png') ;
-    background-size: auto;
-    background-position: center;
+    background: url('../imgs/backgrounds/cloudy-night.png') ;
+  
 }
 
 
 
 body.cloudy-night {
-    background: url('imgs/cloudy-night.png') ;
-    background-size: auto;
-    background-position: center;
+    background: url('../imgs/backgrounds/cloudy-night.png') ;
+  
 }           
 
 
 
-/* 
+
 body.sunny, body.rainy, body.cloudy, body.sunny-night, body.rainy-night, body.cloudy-night {
     background-size: cover;
     background-position: center;
-    width: 1920px;
-    height: 1080px;
-} */
+    /* width: 1920px;
+    height: 1080px; */
+} 
 
 .container{
     margin-top: 80px;
