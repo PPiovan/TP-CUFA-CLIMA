@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    padding-top: 70px;
+    background: #4f4f4f;
+    background: radial-gradient(circle,rgba(79, 79, 79, 1) 0%, rgba(189, 189, 189, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    min-height: 100vh;
+    color: #f5f5f5;
+ 
+}
+
+.text-box {
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    background: rgba(30, 30, 30, 0.7);
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+}   
+
+
+.container {
+    width: 100%;
+    max-width: 1200px; /* Opcional: limita el ancho máximo en pantallas grandes */
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+
+.container .text-center {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+
+}
+
+
+.carousel-inner img {
+    width: 100%;
+    height: 400px;         /* Altura fija para todas */
+    object-fit: cover;     /* Recorta la imagen para que ocupe todo el espacio */
+    border-radius: 10px;
+    max-width: 1020px;     /* Opcional: limita el ancho máximo */
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+
+.text-box, .container .text-center {
+    max-width: 100%;
+    margin: 20px 0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: rgba(30, 30, 30, 0.3);
+    top: 0;
+    left: 0;
+    align-items: center;
+    position: fixed;
+}
+
+.nav-list{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-list ul li{
+    display: inline-block;
+    padding: 8px 12px;
+    list-style: none;
+}
+
+.nav-list ul li a{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.nav-list ul li a::after{
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: yellow;
+    margin: auto;
+    display: block;
+    transition: .1s;
+
+}
+
+.nav-list ul li a:hover::after{
+    width: 100%;
+}
+
+
+
+
+@media (max-width: 600px) {
+    .carousel-inner img {
+        height: 200px;
+        max-width: 100%;
+    }
+}

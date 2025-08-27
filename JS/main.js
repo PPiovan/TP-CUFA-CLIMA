@@ -13,9 +13,9 @@ function setWeatherBackground(weather, icon) {
     if (weather === 'Clear') {
         document.body.classList.add(night ? 'sunny-night' : 'sunny');
     } else if (weather === 'Rain') {
-        document.body.classList.add(night ? 'rainy' : 'rainy-night');
+        document.body.classList.add(night ? 'rainy-night' : 'rainy' );
     } else if (weather === 'Clouds') {
-        document.body.classList.add(night ? 'cloudy' : 'cloudy-night');
+        document.body.classList.add(night ?  'cloudy-night' : 'cloudy');
     }
     // Agrega más condiciones según los tipos de clima
 }
@@ -94,6 +94,8 @@ search.addEventListener('click', () => {
                     image.src = 'imgs/despejado-noche.png';
                 
             }
+
+        
 
             setWeatherBackground(json.weather[0].main, json.weather[0].icon);
 
