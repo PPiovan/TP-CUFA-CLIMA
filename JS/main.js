@@ -28,6 +28,8 @@ input.addEventListener('keydown', function(event) {
 });
 
 
+
+
 search.addEventListener('click', () => {
     const APIKey = '899b64acf3b986f8660e32e13fe9a456';
     const city = document.querySelector('.search-box input').value;
