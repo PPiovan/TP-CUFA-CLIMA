@@ -60,7 +60,7 @@ search.addEventListener('click', () => {
                 return;
             }else{
                 cityHide.textContent = city;
-                container.style.height = '555px';
+                container.style.height = '450px';
                 container.classList.add('active');
                 weatherBox.classList.add('active');
                 weatherDetails.classList.add('active');
@@ -73,13 +73,13 @@ search.addEventListener('click', () => {
 
                 switch (json.weather[0].main) {
                 case 'Clear':
-                    image.src = night ? 'imgs/icons/despejado-noche' : 'imgs/icons/despejado.png';
+                    image.src = night ? 'imgs/icons/despejado-noche.png' : 'imgs/icons/despejado.png';
                     break;
                 case 'Rain':
-                    image.src = night ? 'imgs/icons/lluvia.png' : 'imgs/icons/lluvia.png';
+                    image.src = night ? 'imgs/icons/lluvia-noche.png' : 'imgs/icons/lluvia.png';
                     break;
                 case 'Snow':
-                    image.src = night ? 'imgs/icons/night-snow.png': 'imgs/icons/nieve.png';
+                    image.src = night ? 'imgs/icons/snow.png': 'imgs/icons/snow.png';
                     break;
                 case 'Clouds':
                     image.src = night ? 'imgs/icons/nublado-noche.png': 'imgs/icons/nublado.png';
