@@ -35,7 +35,6 @@ search.addEventListener('click', () => {
     const city = document.querySelector('.search-box input').value;
 
     localStorage.setItem('lastCity', city);
-    localStorage.setItem('APIkey', APIKey);
 
     if(city === '') 
         return;

@@ -71,8 +71,10 @@ nav{
 }
 
 .weather-box{
-    width: 900px;
-    height: 150px;
+    display: flex;
+    width: 50vw;
+    height: 27vh;
+    min-width: 100px;
     margin: 20px 20px;
     border-radius: 10px;
     background: rgba(255, 255, 255, .1);
@@ -81,5 +83,46 @@ nav{
     border-radius: 16px;
     padding: 20px;
     color: #fff;
-    transition: height .6s ease;    
+    transition: height .6s ease;  
+    flex-direction: column;  
+}
+
+.title-container{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.title-container .short-description-daily{
+    color: rgb(199, 199, 199);
+}
+
+.weather-icon{
+    padding-right: 2vw;
+}
+
+.info-weather-container{
+    display: flex;
+    align-items: center;
+}
+
+.temperature-container{
+    padding-right: 5vw;
+}
+
+.long-description-daily{
+    font-size: 1.5vw;
+    color: rgb(255, 255, 175);
+}
+
+.title,
+.short-description-daily,
+.temperature-container,
+.temperature-min,
+.temperature-max,
+.precip-prob,
+.wind-speed,
+.long-description-daily,
+.humidity{
+    font-size: 1.3vw;
 }
