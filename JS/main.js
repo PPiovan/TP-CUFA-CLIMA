@@ -28,9 +28,15 @@ input.addEventListener('keydown', function(event) {
 });
 
 
+
+
 search.addEventListener('click', () => {
     const APIKey = '899b64acf3b986f8660e32e13fe9a456';
     const city = document.querySelector('.search-box input').value;
+
+    localStorage.setItem('lastCity', city);
+    localStorage.setItem('APIkey', APIKey);
+
     if(city === '') 
         return;
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&lang=es&appid=${APIKey}`)
@@ -48,7 +54,8 @@ search.addEventListener('click', () => {
             const icon = json.weather[0].icon;
             const night = icon.endsWith("n"); //esta propiedad devuelve true si es de noche
 
-        
+            localStorage.setItem('lastLat', json.coord.lat)
+            localStorage.setItem('lastLon', json.coord.lon)
 
             const image = document.querySelector('.weather-box img');
             const temperature = document.querySelector('.weather-box .temperature');

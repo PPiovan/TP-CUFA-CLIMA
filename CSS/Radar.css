@@ -8,15 +8,11 @@
 }
 body{
     background: url(../imgs/Weather.jpeg);
-    background-size: cover;
-    background-position: center;
-    justify-content: center;
-    align-items: center;
+    background-size: cover;           /* Cubre toda la pantalla */
+    background-position: center;      /* Centra la imagen */
+    background-repeat: no-repeat;     /* No repite la imagen */
+    background-attachment: fixed;     /* Fija el fondo al viewport */
     min-height: 100vh;
-    display: flex;
-    overflow: hidden;
-    flex-direction: column;
-    margin-top: -12px;
     padding: 0;
 }
 
@@ -28,7 +24,6 @@ nav{
     top: 0;
     left: 0;
     align-items: center;
-    position: fixed;
 }
 
 .nav-list{
@@ -66,4 +61,25 @@ nav{
     margin-left: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.extended-weather-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.weather-box{
+    width: 900px;
+    height: 150px;
+    margin: 20px 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(32px);
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 16px;
+    padding: 20px;
+    color: #fff;
+    transition: height .6s ease;    
 }
