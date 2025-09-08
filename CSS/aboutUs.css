@@ -9,8 +9,8 @@
 
 body {
     padding-top: 70px;
-    background: #4f4f4f;
-    background: radial-gradient(circle,rgba(79, 79, 79, 1) 0%, rgba(189, 189, 189, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(270deg,rgba(49, 168, 101, 1) 8%, rgba(104, 134, 222, 1) 41%, rgba(104, 134, 222, 1) 74%, rgba(26, 145, 115, 1) 94%);    justify-content: center;
+    align-items: center;
     min-height: 100vh;
     color: #f5f5f5;
  
@@ -26,6 +26,17 @@ body {
     max-width: 600px;
     margin: 20px auto;
 }   
+
+.text-box h1 {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.text-box p {
+    font-size: 15px;
+    line-height: 1.6;
+}
 
 
 .container {
@@ -44,15 +55,42 @@ body {
 }
 
 
-.carousel-inner img {
+.thecard {
+    position:absolute;
     width: 100%;
-    height: 400px;         /* Altura fija para todas */
-    object-fit: cover;     /* Recorta la imagen para que ocupe todo el espacio */
-    border-radius: 10px;
-    max-width: 1020px;     /* Opcional: limita el ancho máximo */
-    display: block;
-    margin: 0 auto;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    background-color: darkgrey;
+
 }
+.thecard:hover {
+    transform: rotateY(180deg);
+}
+
+.thefront{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #333;
+}
+
+.theback{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #333;
+    transform: rotateY(180deg);
+    background-color: darkgrey;
+
+}
+
 
 
 
@@ -66,11 +104,12 @@ nav{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background: rgba(30, 30, 30, 0.3);
+    background: rgba(30, 30, 30, 1);
     top: 0;
     left: 0;
+    height: 80px;
     align-items: center;
-    position: fixed;
+    position: absolute;
 }
 
 .nav-list{
@@ -110,6 +149,8 @@ nav{
     margin-bottom: 10px;
 }
 
+
+
 .card{
     background: rgba(0, 0, 0, 0.7);
     border: none;
@@ -130,6 +171,19 @@ nav{
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
+
+
+footer{
+    text-align: center;
+    padding: 10px 0;
+    background: rgba(30, 30, 30, 1);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
 
 @media (max-width: 600px) {
     .carousel-inner img {

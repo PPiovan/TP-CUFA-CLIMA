@@ -310,7 +310,7 @@ nav{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background: rgba(30, 30, 30, 0.3);
+    background: rgba(30, 30, 30, 1);
     top: 0;
     left: 0;
     align-items: center;
@@ -353,3 +353,4 @@ nav{
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
