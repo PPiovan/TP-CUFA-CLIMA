@@ -7,10 +7,7 @@
     font-family: 'Poppins', sans-serif;
 }
 body{
-    background: url(../imgs/Weather.jpeg);
-    background-size: cover;
-    background-position: center;
-    justify-content: center;
+background: linear-gradient(270deg,rgba(49, 168, 101, 1) 8%, rgba(104, 134, 222, 1) 41%, rgba(104, 134, 222, 1) 74%, rgba(26, 145, 115, 1) 94%);    justify-content: center;
     align-items: center;
     min-height: 100vh;
     display: flex;
@@ -20,7 +17,7 @@ body{
     padding: 0;
 }
 
-body.sunny {
+/* body.sunny {
     background: url('../imgs/backgrounds/clear-sun.png') ;
   
 
@@ -44,7 +41,7 @@ body.rainy-night {
 body.cloudy {
     background: url('../imgs/backgrounds/cloudy-night.png') ;
   
-}
+} */
 
 
 

@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/extended_weather.css">
-    <title>Pronostico extendido</title>
+    <title>RADAR</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v7.3.0/ol.css">
+    <link rel="stylesheet" href="/CSS/mapa.css">
 </head>
 <body>
     <nav class="">
@@ -15,15 +16,20 @@
                 <ul>
                     <li><a href="/index.html">Inicio</a></li>
                     <li><a href="/pages/extended-weather.html">Pronostico extendido</a></li>
-                    <li><a href="/pages/mapas.html">Mapa</a></li>
+                    <li><a href="/pages/mapas.html">Mapas</a></li>
                     <li><a href="/pages/about_us.html">Sobre Nosotros</a></li>
                 </ul>
             </div>
     </nav>
-    <div class="extended-weather-container">
-
+    <div class="map-controls">
+    <button id="precip">Precipitación</button>
+    <button id="wind">Viento</button>
+    <button id="temperature">Temperatura</button>
     </div>
-
-<script src="/JS/extended-weather.js"></script>
+    
+    <div id="map"></div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/ol@v7.3.0/dist/ol.js"></script>
+    <script src="/JS/maps.js"></script>
 </body>
 </html>
