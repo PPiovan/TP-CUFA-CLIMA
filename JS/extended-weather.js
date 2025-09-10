@@ -38,7 +38,7 @@ fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/service
 
             const temperatureContainer = document.createElement('p')
             temperatureContainer.classList.add('temperature-container')
-            temperatureContainer.innerHTML = `${Math.round(data.days[i+1].temp)}<span>°C</span>`
+            // temperatureContainer.innerHTML = `${Math.round(data.days[i+span>`
             infoWeatherContainer.appendChild(temperatureContainer)
 
             const temperatureMin = document.createElement('div')
