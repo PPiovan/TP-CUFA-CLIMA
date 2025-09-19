@@ -186,9 +186,34 @@ footer{
 
 
 @media (max-width: 600px) {
-    .carousel-inner img {
-        height: 200px;
-        max-width: 100%;
+    nav {
+        height: 50px;
+        font-size: 14px;
+        padding: 0 8px;
+    }
+    #map {
+        top: 50px;
+        height: calc(100vh - 50px);
+    }
+    .map-controls {
+        bottom: 10px;
+        left: 10px;
+        gap: 6px;
+    }
+    .map-controls button {
+        padding: 8px 12px;
+        font-size: 13px;
+        border-radius: 4px;
+    }
+    .logo-image {
+        margin-left: 4px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        width: 32px;
+        height: 32px;
+    }
+    .nav-list ul li {
+        padding: 4px 6px;
     }
 }
 

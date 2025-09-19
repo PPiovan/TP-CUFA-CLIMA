@@ -14,7 +14,12 @@ body{
     background-attachment: fixed;     
     min-height: 100vh;
     padding: 0;
+   
 }
+
+
+
+
 
 nav{
     display: flex;
@@ -63,7 +68,7 @@ nav{
     margin-bottom: 10px;
 }
 
-.extended-weather-container{
+/* .extended-weather-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,47 +91,124 @@ nav{
     transition: height .6s ease;  
     flex-direction: column;  
 }
+ */
 
-.title-container{
-    display: flex;
-    align-items: center;
-    gap: 1vw;
+
+
+
+/* Contenedor que envuelve todo lo que querés centrar */
+.main-content {
+  display: flex;
+  justify-content: center; /* centra horizontal */
+  align-items: center;     /* centra vertical */
+  min-height: calc(100vh - 80px); 
+  padding: 20px;
+  flex: 1;
 }
 
-.title-container .short-description-daily{
-    color: rgb(199, 199, 199);
+
+
+/* Contenedor */
+.extended-weather-container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center; /* centra en horizontal */
+  align-items: center;     /* centra en vertical */
+  gap: 20px;               /* espacio entre cajas */
+  max-width: 1400px;       /* ancho total para 6 cajas */
+  padding: 20px;
 }
 
-.weather-icon{
-    padding-right: 2vw;
+/* Cada box */
+.weather-box {
+  flex: 1 1 calc(16.66% - 20px); /* 6 por fila (100 / 6 ≈ 16.66%) */
+  max-width: 200px;   /* límite ancho */
+  min-width: 180px;   /* no se achiquen mucho */
+
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
 }
 
-.info-weather-container{
-    display: flex;
-    align-items: center;
+/* Título */
+.weather-box .title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.temperature-container{
-    padding-right: 5vw;
+/* Descripción corta */
+.short-description-daily {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  opacity: 0.8;
 }
 
-.long-description-daily{
-    font-size: 1.5vw;
-    color: rgb(255, 255, 175);
+/* Icono */
+.weather-icon {
+  width: 70px;
+  height: 70px;
+  margin: 10px auto;
 }
 
-.title,
-.short-description-daily,
-.temperature-container,
-.temperature-min,
-.temperature-max,
-.precip-prob,
-.wind-speed,
-.long-description-daily,
-.humidity{
-    font-size: 1.3vw;
+/* Temperaturas */
+.temperature-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
 }
 
-h2{
-    
+.temperature-max {
+  color: #ff6b6b;
+  font-weight: bold;
 }
+.temperature-min {
+  color: blue;
+}
+
+/* Humedad y viento */
+.humidity, .wind-speed {
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* Descripción larga */
+.long-description-daily {
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+
+
+
+/* 📱 Responsive */
+@media (max-width: 1200px) {
+  .weather-box {
+    flex: 1 1 calc(33.33% - 20px); /* 3 por fila */
+  }
+}
+@media (max-width: 768px) {
+  .weather-box {
+    flex: 1 1 calc(50% - 20px); /* 2 por fila */
+  }
+}
+@media (max-width: 480px) {
+  .weather-box {
+    flex: 1 1 100%; /* 1 por fila en celular */
+  }
+}
+
+
