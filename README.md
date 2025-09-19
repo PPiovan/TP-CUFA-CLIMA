@@ -12,6 +12,7 @@ Pueden visualizarse también la extensión del clima a lo largo de los días y u
 
 <h3>Inicio</h3>
 <img width="1917" height="951" alt="inicio" src="https://github.com/user-attachments/assets/1b04b445-f9bc-4973-953d-48a4d7de12c5" />
+<img width="1916" height="946" alt="image" src="https://github.com/user-attachments/assets/87d7fc65-e037-40f5-8ba1-0c44216770e0" />
 <h3>Clima Extendido</h3>
 <img width="1910" height="941" alt="2" src="https://github.com/user-attachments/assets/c9db3384-8a8e-45d6-9451-1513e8ba8629" />
 <h3>Precipitaciones en el mapa</h3>
