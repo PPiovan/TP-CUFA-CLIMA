@@ -33,7 +33,7 @@ En cuanto al mapa y sus propiedades, se accede mediante el boton "Mapas", tambi�
 <h1>✔️ Tecnologías utilizadas<h1>
   <ul>
     <li><h5>HTML5</h5></li>
-    <li><h5>CSS3</h5> </li>
+    <li><h5>CSS</h5> </li>
     <li><h5>Javascript</h5></li>
   </ul>
   
