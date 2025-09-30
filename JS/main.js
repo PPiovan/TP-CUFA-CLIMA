@@ -6,7 +6,7 @@ const weatherDetails = document.querySelector('.weather-details');
 const error404 = document.querySelector('.not-found');
 const cityHide = document.querySelector('.city-hide');
 
-/* function setWeatherBackground(weather, icon) {
+function setWeatherBackground(weather, icon) {
      const night = icon.endsWith("n");
 
     document.body.classList.remove('sunny', 'rainy', 'cloudy', 'sunny-night', 'rainy-night', 'cloudy-night');
@@ -18,7 +18,16 @@ const cityHide = document.querySelector('.city-hide');
         document.body.classList.add(night ?  'cloudy-night' : 'cloudy');
     }
     // Agrega más condiciones según los tipos de clima
-} */
+}
+
+//para que tambiénm busque con el enter
+input.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        search.click(); //le pega una simulada de click :)
+    }
+});
+
+
 
 
 search.addEventListener('click', () => {
@@ -44,8 +53,8 @@ search.addEventListener('click', () => {
             const icon = json.weather[0].icon;
             const night = icon.endsWith("n"); //esta propiedad devuelve true si es de noche
 
-            localStorage.setItem('lastLat', json.coord.lat) //latitud
-            localStorage.setItem('lastLon', json.coord.lon) //longitud
+            localStorage.setItem('lastLat', json.coord.lat)
+            localStorage.setItem('lastLon', json.coord.lon)
 
             const image = document.querySelector('.weather-box img');
             const temperature = document.querySelector('.weather-box .temperature');
@@ -55,8 +64,7 @@ search.addEventListener('click', () => {
         
             if(cityHide.textContent == city){
                 return;
-            }
-            else{
+            }else{
                 cityHide.textContent = city;
                 container.style.height = '450px';
                 container.classList.add('active');
@@ -64,9 +72,9 @@ search.addEventListener('click', () => {
                 weatherDetails.classList.add('active');
                 error404.classList.remove('active');
 
-                setTimeout(() => {
+                 setTimeout(() => {
                     container.classList.remove('active');
-                }, 2500);
+                }, 2500); 
 
 
                 switch (json.weather[0].main) {
@@ -95,7 +103,7 @@ search.addEventListener('click', () => {
 
         
 
-            //setWeatherBackground(json.weather[0].main, json.weather[0].icon);
+            setWeatherBackground(json.weather[0].main, json.weather[0].icon);
 
             temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
             description.innerHTML = `${json.weather[0].description}`;
@@ -106,7 +114,6 @@ search.addEventListener('click', () => {
             const infoHumidity = document.querySelector('.info-humidity');
             const infoWind = document.querySelector('.info-wind');
 
-            //animacion de cambio de ciudad
             const elCloneInfoWeather = infoWeather.cloneNode(true)
             const elCloneInfoHumidity = infoHumidity.cloneNode(true)
             const elCloneInfoWind = infoWind.cloneNode(true)
@@ -141,14 +148,14 @@ search.addEventListener('click', () => {
 
 
 
-            if (totalCloneInfoWeather > 0){ //si hay algun clon anterior (busquedas previas)
+            if (totalCloneInfoWeather > 0){
              
-               cloneInfoWeatherFirst.classList.remove('active-clone');  //saco las animaciones de ese clon para que no se muestren
+               cloneInfoWeatherFirst.classList.remove('active-clone');
                cloneInfoHumidityFirst.classList.remove('active-clone');
                cloneInfoWindFirst.classList.remove('active-clone');
                
                setTimeout(() => {
-                   cloneInfoWeatherFirst.remove();  //elimino los clones
+                   cloneInfoWeatherFirst.remove();
                    cloneInfoHumidityFirst.remove();
                    cloneInfoWindFirst.remove();
                }, 2200);    
@@ -163,9 +170,15 @@ search.addEventListener('click', () => {
     
 });
 
-//para que tambiénm busque con el enter
-input.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        search.click(); //le pega una simulada de click :)
-    }
+const menuToggle = document.querySelector('.menu-toggle');
+const navList = document.querySelector('.nav-list');
+
+menuToggle.addEventListener('click', () => {
+  navList.classList.toggle('active');
+});
+
+document.querySelectorAll('.nav-list a').forEach(link => {
+  link.addEventListener('click', () => {
+    navList.classList.remove('active');
+  });
 });

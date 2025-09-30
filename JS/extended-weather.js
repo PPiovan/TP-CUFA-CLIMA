@@ -96,3 +96,11 @@ fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lastLat}&lon=${las
     });
   })
   .catch(err => console.error(err));
+
+
+const menuToggle = document.getElementById('menu-toggle');
+const navList = document.getElementById('nav-list');
+
+menuToggle.addEventListener('click', () => {
+    navList.classList.toggle('active');
+});

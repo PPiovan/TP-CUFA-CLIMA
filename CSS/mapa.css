@@ -127,3 +127,48 @@ nav{
         padding: 4px 6px;
     }
 }
+
+/* ====== BOTÓN HAMBURGUESA ====== */
+.menu-toggle {
+    display: none; /* Oculto en escritorio */
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+    z-index: 3;
+}
+
+/* ====== RESPONSIVE ====== */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostrar en móvil */
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: rgba(30, 30, 30, 0.95);
+        width: 200px;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+        border-radius: 0 0 8px 8px;
+        z-index: 4;
+    }
+
+    .nav-list ul {
+        flex-direction: column;
+        text-align: right;
+        padding: 10px;
+    }
+
+    .nav-list ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .nav-list.active {
+        height: 220px; /* Ajustar según cantidad de enlaces */
+    }
+}
+

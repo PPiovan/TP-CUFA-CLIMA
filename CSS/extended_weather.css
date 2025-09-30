@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 body{
     background: linear-gradient(270deg,rgba(49, 168, 101, 1) 8%, rgba(104, 134, 222, 1) 41%, rgba(104, 134, 222, 1) 74%, rgba(26, 145, 115, 1) 94%);    
     background-size: cover;           
@@ -14,12 +15,7 @@ body{
     background-attachment: fixed;     
     min-height: 100vh;
     padding: 0;
-   
 }
-
-
-
-
 
 nav{
     display: flex;
@@ -55,7 +51,6 @@ nav{
     margin: auto;
     display: block;
     transition: .1s;
-
 }
 
 .nav-list ul li a:hover::after{
@@ -68,63 +63,32 @@ nav{
     margin-bottom: 10px;
 }
 
-/* .extended-weather-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.weather-box{
-    display: flex;
-    width: 50vw;
-    height: 27vh;
-    min-width: 100px;
-    margin: 20px 20px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, .1);
-    backdrop-filter: blur(32px);
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 16px;
-    padding: 20px;
-    color: #fff;
-    transition: height .6s ease;  
-    flex-direction: column;  
-}
- */
-
-
-
-
-/* Contenedor que envuelve todo lo que querés centrar */
+/* Contenedor principal */
 .main-content {
   display: flex;
-  justify-content: center; /* centra horizontal */
-  align-items: center;     /* centra vertical */
+  justify-content: center;
+  align-items: center;
   min-height: calc(100vh - 80px); 
   padding: 20px;
   flex: 1;
 }
 
-
-
-/* Contenedor */
+/* Contenedor extendido */
 .extended-weather-container {
   display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: center; /* centra en horizontal */
-  align-items: center;     /* centra en vertical */
-  gap: 20px;               /* espacio entre cajas */
-  max-width: 1400px;       /* ancho total para 6 cajas */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1400px;
   padding: 20px;
+  flex-wrap: wrap;
 }
 
 /* Cada box */
 .weather-box {
-  flex: 1 1 calc(16.66% - 20px); /* 6 por fila (100 / 6 ≈ 16.66%) */
-  max-width: 200px;   /* límite ancho */
-  min-width: 180px;   /* no se achiquen mucho */
-
+  flex: 1 1 calc(16.66% - 20px); /* 6 por fila */
+  max-width: 200px;
+  min-width: 180px;
   background: rgba(255, 255, 255, 0.15);
   border-radius: 20px;
   padding: 20px;
@@ -132,7 +96,6 @@ nav{
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -191,24 +154,117 @@ nav{
   opacity: 0.9;
 }
 
+/* ====== BREAKPOINTS PARA RESPONSIVE WEATHER BOX ====== */
 
-
-
-/* 📱 Responsive */
+/* Pantallas grandes-medias */
 @media (max-width: 1200px) {
   .weather-box {
     flex: 1 1 calc(33.33% - 20px); /* 3 por fila */
+    max-width: 250px;
+    padding: 18px;
+  }
+
+  .weather-box .title {
+    font-size: 1rem;
+  }
+  .short-description-daily {
+    font-size: 0.85rem;
+  }
+  .temperature-container {
+    font-size: 0.9rem;
+  }
+  .weather-icon {
+    width: 60px;
+    height: 60px;
   }
 }
+
+/* Pantallas medianas */
 @media (max-width: 768px) {
   .weather-box {
     flex: 1 1 calc(50% - 20px); /* 2 por fila */
+    max-width: 220px;
+    padding: 15px;
+  }
+
+  .weather-box .title {
+    font-size: 0.95rem;
+  }
+  .short-description-daily {
+    font-size: 0.8rem;
+  }
+  .temperature-container {
+    font-size: 0.85rem;
+  }
+  .weather-icon {
+    width: 55px;
+    height: 55px;
   }
 }
+
+/* Pantallas pequeñas */
 @media (max-width: 480px) {
   .weather-box {
-    flex: 1 1 100%; /* 1 por fila en celular */
+    flex: 1 1 100%; /* 1 por fila */
+    max-width: 100%;
+    padding: 12px;
+  }
+
+  .weather-box .title {
+    font-size: 0.9rem;
+  }
+  .short-description-daily {
+    font-size: 0.75rem;
+  }
+  .temperature-container {
+    font-size: 0.8rem;
+  }
+  .weather-icon {
+    width: 50px;
+    height: 50px;
   }
 }
 
+/* BOTÓN HAMBURGUESA */
+.menu-toggle {
+  display: none;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
 
+/* RESPONSIVE NAVBAR */
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    margin-right: 20px;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    height: 0;
+    background: rgba(30, 30, 30, 0.95);
+    overflow: hidden;
+    transition: height 0.3s ease;
+    border-radius: 0 0 8px 8px;
+    z-index: 1000;
+  }
+
+  .nav-list ul {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-list ul li {
+    margin: 10px 0;
+  }
+
+  .nav-list.active {
+    height: auto; /* Se expande cuando está activo */
+  }
+}

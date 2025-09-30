@@ -72,6 +72,7 @@ body.sunny, body.rainy, body.cloudy, body.sunny-night, body.rainy-night, body.cl
     padding: 20px;
     color: #fff;
     transition: height .6s ease;
+    z-index: 1;
 }
 
 .search-box{
@@ -315,6 +316,7 @@ nav{
     left: 0;
     align-items: center;
     position: fixed;
+    z-index: 1000;
 }
 
 .nav-list{
@@ -352,5 +354,57 @@ nav{
     margin-left: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+/* ====== BOTÓN HAMBURGUESA ====== */
+.menu-toggle {
+  display: none; /* Oculto en escritorio */
+  font-size: 32px;
+  color: white;
+  margin-right: 20px;
+  cursor: pointer;
+  z-index: 3; /* para que quede siempre arriba */
+}
+
+/* ====== RESPONSIVE ====== */
+@media screen and (max-width: 768px) {
+  .nav-list {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(30, 30, 30, 0.95);
+    width: 200px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+    border-radius: 0 0 8px 8px;
+    z-index: 4;
+  }
+
+  .nav-list ul {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    padding: 10px;
+    z-index: 6;
+  }
+
+  .nav-list ul li {
+    display: block;
+    margin: 10px 0;
+    z-index: 9;
+  }
+
+  /* Ocultar menú por defecto */
+  .nav-list.active {
+    height: 300px; /* Ajustar según cantidad de enlaces */
+    z-index: 10;
+  }
+
+  /* Mostrar botón hamburguesa en móvil */
+  .menu-toggle {
+    display: block;
+    z-index: 123;
+  }
 }
 

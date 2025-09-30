@@ -4,113 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/CSS/aboutUs.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Sobre nosotros</title>
 </head>
 <body>
-    <!-- NAVBAR -->
-     <header>
 
-     <nav class="">
+    <nav>
         <a href="../index.html">
-            <img class="logo-image" src="/imgs/icons/despejado.png" alt="logoPagina" width="50px" height="50px">
+            <img class="logo-image" src="/imgs/icons/despejado.png" alt="logoPagina" width="50" height="50">
         </a>
-            <h2 style="color: white;">WeatherHub</h2>
-            <div class="nav-list">
-                <ul>
-                    <li><a href="/index.html">Inicio</a></li>
-                    <li><a href="/pages/extended-weather.html">Pronostico extendido</a></li>
-                    <li><a href="/pages/mapas.html">Mapa</a></li>
-                    <li><a href="/pages/about_us.html">Sobre Nosotros</a></li>
-                </ul>
-            </div>
+        <h2>WeatherHub</h2>
+
+        <div class="menu-toggle">
+            <i class='bx bx-menu'></i>
+        </div>
+
+        <div class="nav-list">
+            <ul>
+                <li><a href="/index.html">Inicio</a></li>
+                <li><a href="/pages/extended-weather.html">Pronostico extendido</a></li>
+                <li><a href="/pages/mapas.html">Mapa</a></li>
+                <li><a href="/pages/about_us.html">Sobre Nosotros</a></li>
+            </ul>
+        </div>
     </nav>
-    </header>
 
-    
-    
-<div class="container">
-
-    <div class="container text-center">
-    <div class="row align-items-start">
-        <div class="col">
-
-            <div class=" text-box">
-
-                <h2>¿Quiénes somos?</h2>
-                <p>Somos un equipo de desarrolladores apasionados por la tecnología y el clima. Nuestro objetivo es proporcionar información meteorológica precisa y accesible para todos.</p>
-
-            </div>
-
-            <div class="text-box">
-                <h2>Nuestra Misión</h2>
-                <p>Nuestra misión es ofrecer a nuestros usuarios datos meteorológicos confiables y actualizados, ayudándolos a planificar sus actividades diarias y mantenerse informados sobre las condiciones climáticas.</p>
-            </div>
-        </div>
-        
-        <div class="col" >
-            <div >
-                <img src="/imgs/mix/equipo.webp" alt="" style="height: 500px;">
-            </div>
+    <div class="main-container">
+        <div class="text-box">
+            <h2>¿Quiénes somos?</h2>
+            <p>Somos un equipo de desarrolladores apasionados por la tecnología y el clima. Nuestro objetivo es proporcionar información meteorológica precisa y accesible para todos.</p>
         </div>
 
+        <div class="text-box">
+            <h2>Nuestra Misión</h2>
+            <p>Nuestra misión es ofrecer a nuestros usuarios datos meteorológicos confiables y actualizados, ayudándolos a planificar sus actividades diarias y mantenerse informados sobre las condiciones climáticas.</p>
         </div>
-    </div>
-    </div>
 
-</div>
-
-
-<div class="container text-center">
-    <h1>Conoce a nuestro equipo</h1>
-    <div class="row row-cols-1 row-cols-md-4 g-4">
-        <div class="col">
-            <div class="card h-100">
-                <img src="/imgs/mix/pablo.jpeg" class="card-img-top" alt="...">
+        <h1 class="team-title">Conoce a nuestro equipo</h1>
+        <div class="team-cards">
+            <div class="card">
+                <img src="/imgs/mix/pablo.jpeg" alt="Pablo">
                 <div class="card-body">
-                    <h5 class="card-title">Pablo</h5>
-                    <p class="card-text">Desarrollador JR</p>
+                    <h5>Pablo</h5>
+                    <p>Desarrollador JR</p>
                 </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="/imgs/mix/Emma.png" class="card-img-top" alt="...">
+            <div class="card">
+                <img src="/imgs/mix/Emma.png" alt="Emmanuel">
                 <div class="card-body">
-                    <h5 class="card-title">Emmanuel</h5>
-                    <p class="card-text">Desarrollador JR</p>
+                    <h5>Emmanuel</h5>
+                    <p>Desarrollador JR</p>
                 </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="/imgs/mix/Juli.jpeg" class="card-img-top" alt="...">
+            <div class="card">
+                <img src="/imgs/mix/Juli.jpeg" alt="Julian">
                 <div class="card-body">
-                    <h5 class="card-title">Julian</h5>
-                    <p class="card-text">Desarrollador JR</p>
+                    <h5>Julian</h5>
+                    <p>Desarrollador JR</p>
                 </div>
             </div>
-        </div>
-        <div class="col">
-            <div class="card h-100">
-                <img src="/imgs/mix/JOSEEEEEEE.jpg" class="card-img-top" alt="...">
+            <div class="card">
+                <img src="/imgs/mix/JOSEEEEEEE.jpg" alt="Jose">
                 <div class="card-body">
-                    <h5 class="card-title">Jose</h5>
-                    <p class="card-text">Desarrollador JR</p>
+                    <h5>Jose</h5>
+                    <p>Desarrollador JR</p>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div>
     <footer>
         <p>© 2024 WeatherHub. Todos los derechos reservados.</p>
     </footer>
-</div>
 
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="/JS/about-us.js"></script>
 </body>
 </html>
