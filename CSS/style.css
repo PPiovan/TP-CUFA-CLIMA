@@ -420,3 +420,22 @@ nav{
   }
 }
 
+/* 🌞 Tema claro */
+.body-container.claro nav {
+  background-color: white;
+  color: black;
+}
+
+.body-container.claro nav a {
+  color: black;
+}
+
+/* 🌙 Tema oscuro */
+.body-container.oscuro nav {
+  background-color: black;
+  color: white;
+}
+
+.body-container.oscuro nav a {
+  color: white;
+}
