@@ -8,12 +8,20 @@
 }
 
 body {
-    background: linear-gradient(270deg,#50bed1 8%, rgba(104,134,222,1) 41%, rgba(104,134,222,1) 74%, #50bed1 94%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     color: #fff;
 }
+
+.claro{
+    background: linear-gradient(270deg,rgb(80, 190, 209) 8%, rgba(104, 134, 222, 1) 41%, rgba(104, 134, 222, 1) 74%, rgb(92, 205, 224) 94%);
+}
+
+.oscuro{
+    background: linear-gradient(270deg,#1a282b 8%, #14171f 41%, #14171f 74%, #1a282b);
+}
+
 
 /* NAVBAR */
 nav{
@@ -60,8 +68,12 @@ nav{
     margin-left: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+   transition: transform 0.6s;
 }
 
+.logo-image.rotate {
+    transform: rotate(360deg);
+}
 /* HAMBURGUESA */
 .menu-toggle {
     display: none;
@@ -172,3 +184,24 @@ footer {
         height: 300px; /* ajustar según cantidad de enlaces */
     }
 }
+
+/* 🌞 Tema claro */
+body.claro nav {
+  background-color: white;
+  color: black;
+}
+
+body.claro nav a {
+  color: black;
+}
+
+/* 🌙 Tema oscuro */
+body.oscuro nav {
+  background-color: black;
+  color: white;
+}
+
+body.oscuro nav a {
+  color: white;
+}
+

@@ -198,6 +198,12 @@ if (temaActual === 'oscuro') {
 }
 
 toggleDarkMode.addEventListener('click', () => {
+
+    toggleDarkMode.classList.add('rotate');
+    setTimeout(() => {
+        toggleDarkMode.classList.remove('rotate');
+    }, 600); 
+
     if (temaActual === 'claro') {
         temaActual = 'oscuro'
         toggleDarkMode.src = "imgs/icons/despejado-noche.png"

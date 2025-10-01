@@ -25,7 +25,7 @@
 }
 
 .oscuro{
-    background: black;
+    background: linear-gradient(270deg,#1a282b 8%, #14171f 41%, #14171f 74%, #1a282b);
 }
 
 
@@ -366,6 +366,11 @@ nav{
     margin-left: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+    transition: transform 0.6s;
+}
+
+.logo-image.rotate {
+    transform: rotate(360deg);
 }
 
 /* ====== BOTÓN HAMBURGUESA ====== */

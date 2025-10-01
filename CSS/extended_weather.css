@@ -8,7 +8,6 @@
 }
 
 body{
-    background: linear-gradient(270deg,#50bed1 8%, rgba(104, 134, 222, 1) 41%, rgba(104, 134, 222, 1) 74%, #50bed1 94%);    
     background-size: cover;           
     background-position: center;      
     background-repeat: no-repeat;     
@@ -16,6 +15,15 @@ body{
     min-height: 100vh;
     padding: 0;
 }
+
+.claro{
+    background: linear-gradient(270deg,rgb(80, 190, 209) 8%, rgba(104, 134, 222, 1) 41%, rgba(104, 134, 222, 1) 74%, rgb(92, 205, 224) 94%);
+}
+
+.oscuro{
+    background: linear-gradient(270deg,#1a282b 8%, #14171f 41%, #14171f 74%, #1a282b);
+}
+
 
 nav{
     display: flex;
@@ -61,6 +69,11 @@ nav{
     margin-left: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+   transition: transform 0.6s;
+}
+
+.logo-image.rotate {
+    transform: rotate(360deg);
 }
 
 /* Contenedor principal */
@@ -268,3 +281,24 @@ nav{
     height: auto; /* Se expande cuando está activo */
   }
 }
+
+/* 🌞 Tema claro */
+body.claro nav {
+  background-color: white;
+  color: black;
+}
+
+body.claro nav a {
+  color: black;
+}
+
+/* 🌙 Tema oscuro */
+body.oscuro nav {
+  background-color: black;
+  color: white;
+}
+
+body.oscuro nav a {
+  color: white;
+}
+
